@@ -25,7 +25,7 @@ const TURBINES_DATA = [
     id: "T1",
     name: "Ветрогенератор T1",
     branch: "Клон 1",
-    coords: [43.332786, 28.071003],
+    coords: [43.557739, 28.119453],
     overallStatus: "Армировка / Бетон",
     progress: 55,
     specs: { trafo: "1 x 5.1 MVA", cable: "1x95/16 mm²", type: "1 input + 1 trafo" },
