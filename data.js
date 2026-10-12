@@ -46,7 +46,10 @@ const TURBINES_DATA = [
     specs: { trafo: "1 x 5.1 MVA", cable: "1x185/25 mm²", type: "2 inputs + 1 trafo" },
     stages: { road: "Готов", pad: "В насип", foundation: "Изкопни дейности", grid: "В проект", turbine: "Не е доставена" },
     timeline: [
-      { date: "01.09.2026", title: "Начало на изкопни работи", note: "Геоложки контрол преминат успешно.", img: "https://images.unsplash.com/photo-1541888946425-d0fbb186f5f7?auto=format&fit=crop&w=800&q=80" }
+      { date: "22.05.2026", title: "Подготвяне на терена T2", note: "", img: "20260617_095346.jpg" },
+      { date: "31.08.2026", title: "Метална конструкция T2", note: "", img: "20260922_143732.jpg" },
+      { date: "05.09.2026", title: "Завиване на фундамент T2", note: "", img: "20261001_105126.jpg" },
+      { date: "06.09.2026", title: "Затруване на фундамент T2", note: "", img: "20261009_115423.jpg" }
     ],
     video: null
   },
