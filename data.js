@@ -1,20 +1,22 @@
-// data.js - ВЕЦ "Кремена - Тригорци"
-const ACCESS_PIN = "kremena2026"; // Вашата парола за вход
+// data.js - Данни за проект ВЕЦ "Кремена - Тригорци" (70 MW)
+
+const ACCESS_PIN = "kremena2026"; // Парола за достъп
 
 const PROJECT_CONFIG = {
   name: "ВЕЦ «Кремена - Тригорци» (70 MW)",
-  centerCoords: [43.565, 28.145], // Център около парка
+  substationName: "Подстанция 33/110 kV",
+  centerCoords: [43.6050, 28.1720], // Център на района на с. Кремена
   defaultZoom: 13
 };
 
 // Етапи на изграждане и техните цветове
 const STATUS_COLORS = {
-  "Планиран": "#94a3b8",            // Сиво
-  "Изкопни работи": "#f59e0b",      // Оранжево
-  "Армировка / Бетон": "#3b82f6",   // Синьо
-  "Монтаж на турбина": "#8b5cf6",   // Лилаво
-  "Завършен (Акт 14/15)": "#10b981",// Зелено
-  "Бъдещо разширение": "#64748b"    // Тъмно сиво
+  "Планиран": "#94a3b8",      // Сиво
+  "Изкоп": "#f59e0b",         // Оранжево
+  "Армировка / Бетон": "#3b82f6", // Синьо
+  "Монтаж турбина": "#8b5cf6", // Лилаво
+  "Завършен / Акт 14/15": "#10b981", // Зелено
+  "Бъдещо разширение": "#64748b" // Тъмно сиво
 };
 
 const TURBINES_DATA = [
@@ -26,10 +28,11 @@ const TURBINES_DATA = [
     coords: [43.557739, 28.119453],
     overallStatus: "Армировка / Бетон",
     progress: 55,
-    specs: { trafo: "1x 5.1 MVA", cable: "1x95/16 mm²", type: "1 input + 1 trafo" },
-    stages: { road: "Готов", pad: "Готова", foundation: "Армиране", grid: "Изкоп", turbine: "Очаква се" },
+    specs: { trafo: "1 x 5.1 MVA", cable: "1x95/16 mm²", type: "1 input + 1 trafo" },
+    stages: { road: "Готов", pad: "Готова", foundation: "В процес на армиране", grid: "Трасето е изкопано", turbine: "Не е доставена" },
     timeline: [
-      { date: "10.08.2026", title: "Изкоп завършен", note: "Нивото на подложен бетон е прието.", img: "" }
+      { date: "10.08.2026", title: "Завършен изкоп", note: "Нивото на подложения бетон е одобрено.", img: "https://images.unsplash.com/photo-1541888946425-d0fbb186f5f7?auto=format&fit=crop&w=800&q=80" },
+      { date: "25.08.2026", title: "Армиране на фундамент", note: "Полагане на долна скара.", img: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80" }
     ],
     video: null
   },
@@ -38,11 +41,13 @@ const TURBINES_DATA = [
     name: "Ветрогенератор T2",
     branch: "Клон 1",
     coords: [43.559733, 28.126353],
-    overallStatus: "Изкопни работи",
-    progress: 30,
-    specs: { trafo: "1x 5.1 MVA", cable: "1x185/25 mm²", type: "2 inputs + 1 trafo" },
-    stages: { road: "Готов", pad: "В насип", foundation: "Изкоп", grid: "В проект", turbine: "Не е доставена" },
-    timeline: [],
+    overallStatus: "Изкоп",
+    progress: 25,
+    specs: { trafo: "1 x 5.1 MVA", cable: "1x185/25 mm²", type: "2 inputs + 1 trafo" },
+    stages: { road: "Готов", pad: "В насип", foundation: "Изкопни дейности", grid: "В проект", turbine: "Не е доставена" },
+    timeline: [
+      { date: "01.09.2026", title: "Начало на изкопни работи", note: "Геоложки контрол преминат успешно.", img: "https://images.unsplash.com/photo-1541888946425-d0fbb186f5f7?auto=format&fit=crop&w=800&q=80" }
+    ],
     video: null
   },
   {
@@ -52,7 +57,7 @@ const TURBINES_DATA = [
     coords: [43.563800, 28.134050],
     overallStatus: "Планиран",
     progress: 10,
-    specs: { trafo: "1x 5.1 MVA", cable: "1x400/35 mm²", type: "2 inputs + 1 trafo" },
+    specs: { trafo: "1 x 5.1 MVA", cable: "1x400/35 mm²", type: "2 inputs + 1 trafo" },
     stages: { road: "Трасиран", pad: "Планирана", foundation: "Не е стартиран", grid: "Не е стартиран", turbine: "Не е доставена" },
     timeline: [],
     video: null
@@ -63,8 +68,8 @@ const TURBINES_DATA = [
     branch: "Клон 1",
     coords: [43.571536, 28.137017],
     overallStatus: "Планиран",
-    progress: 5,
-    specs: { trafo: "1x 5.1 MVA", cable: "1x400/35 mm²", type: "2 inputs + 1 trafo" },
+    progress: 10,
+    specs: { trafo: "1 x 5.1 MVA", cable: "1x400/35 mm²", type: "2 inputs + 1 trafo" },
     stages: { road: "В процес", pad: "Планирана", foundation: "Не е стартиран", grid: "Не е стартиран", turbine: "Не е доставена" },
     timeline: [],
     video: null
@@ -76,7 +81,7 @@ const TURBINES_DATA = [
     coords: [43.574708, 28.134431],
     overallStatus: "Планиран",
     progress: 5,
-    specs: { trafo: "1x 5.1 MVA", cable: "1x95/16 mm²", type: "1 input + 1 trafo" },
+    specs: { trafo: "1 x 5.1 MVA", cable: "1x95/16 mm²", type: "1 input + 1 trafo" },
     stages: { road: "Не е стартиран", pad: "Планирана", foundation: "Не е стартиран", grid: "Не е стартиран", turbine: "Не е доставена" },
     timeline: [],
     video: null
@@ -88,10 +93,10 @@ const TURBINES_DATA = [
     name: "Ветрогенератор T4",
     branch: "Клон 2",
     coords: [43.564311, 28.142633],
-    overallStatus: "Изкопни работи",
-    progress: 35,
-    specs: { trafo: "1x 5.1 MVA", cable: "1x95/16 mm²", type: "2 inputs + 1 trafo" },
-    stages: { road: "Готов", pad: "Уплътнена", foundation: "Изкоп", grid: "Трасе прокарано", turbine: "Не е доставена" },
+    overallStatus: "Изкоп",
+    progress: 30,
+    specs: { trafo: "1 x 5.1 MVA", cable: "1x95/16 mm²", type: "2 inputs + 1 trafo" },
+    stages: { road: "Готов", pad: "Уплътнена", foundation: "Дълбок изкоп", grid: "Трасе прокарано", turbine: "Не е доставена" },
     timeline: [],
     video: null
   },
@@ -101,8 +106,8 @@ const TURBINES_DATA = [
     branch: "Клон 2",
     coords: [43.568986, 28.147161],
     overallStatus: "Планиран",
-    progress: 10,
-    specs: { trafo: "1x 5.1 MVA", cable: "1x185/25 mm²", type: "3 inputs + 1 trafo" },
+    progress: 5,
+    specs: { trafo: "1 x 5.1 MVA", cable: "1x185/25 mm²", type: "3 inputs + 1 trafo" },
     stages: { road: "Трасиран", pad: "Планирана", foundation: "Не е стартиран", grid: "Не е стартиран", turbine: "Не е доставена" },
     timeline: [],
     video: null
@@ -115,8 +120,8 @@ const TURBINES_DATA = [
     branch: "Клон 3",
     coords: [43.568867, 28.160269],
     overallStatus: "Планиран",
-    progress: 10,
-    specs: { trafo: "1x 5.1 MVA", cable: "1x400/35 mm²", type: "2 inputs + 1 trafo" },
+    progress: 5,
+    specs: { trafo: "1 x 5.1 MVA", cable: "1x400/35 mm²", type: "2 inputs + 1 trafo" },
     stages: { road: "Трасиран", pad: "Планирана", foundation: "Не е стартиран", grid: "Не е стартиран", turbine: "Не е доставена" },
     timeline: [],
     video: null
@@ -128,7 +133,7 @@ const TURBINES_DATA = [
     coords: [43.563956, 28.163772],
     overallStatus: "Планиран",
     progress: 0,
-    specs: { trafo: "1x 5.1 MVA", cable: "1x185/25 mm²", type: "2 inputs + 1 trafo" },
+    specs: { trafo: "1 x 5.1 MVA", cable: "1x185/25 mm²", type: "2 inputs + 1 trafo" },
     stages: { road: "Не е стартиран", pad: "Не е стартирана", foundation: "Не е стартиран", grid: "Не е стартиран", turbine: "Не е доставена" },
     timeline: [],
     video: null
@@ -140,7 +145,7 @@ const TURBINES_DATA = [
     coords: [43.561775, 28.145539],
     overallStatus: "Планиран",
     progress: 0,
-    specs: { trafo: "1x 5.1 MVA", cable: "1x95/16 mm²", type: "1 input + 1 trafo" },
+    specs: { trafo: "1 x 5.1 MVA", cable: "1x95/16 mm²", type: "1 input + 1 trafo" },
     stages: { road: "Не е стартиран", pad: "Не е стартирана", foundation: "Не е стартиран", grid: "Не е стартиран", turbine: "Не е доставена" },
     timeline: [],
     video: null
@@ -153,8 +158,8 @@ const TURBINES_DATA = [
     branch: "Клон 4",
     coords: [43.555614, 28.150214],
     overallStatus: "Армировка / Бетон",
-    progress: 65,
-    specs: { trafo: "1x 5.1 MVA", cable: "1x400/35 mm²", type: "2 inputs + 1 trafo" },
+    progress: 60,
+    specs: { trafo: "1 x 5.1 MVA", cable: "1x400/35 mm²", type: "2 inputs + 1 trafo" },
     stages: { road: "Готов", pad: "Готова", foundation: "Кофриране и армиране", grid: "Кабел положен", turbine: "Не е доставена" },
     timeline: [],
     video: null
@@ -164,11 +169,13 @@ const TURBINES_DATA = [
     name: "Ветрогенератор T15",
     branch: "Клон 4",
     coords: [43.548272, 28.153833],
-    overallStatus: "Завършен (Акт 14/15)",
-    progress: 90,
-    specs: { trafo: "1x 5.1 MVA", cable: "1x185/25 mm²", type: "3 inputs + 1 trafo" },
-    stages: { road: "Готов", pad: "Готова", foundation: "Бетониран (Акт 14)", grid: "Положен кабел", turbine: "Очаква се" },
-    timeline: [],
+    overallStatus: "Завършен / Акт 14/15",
+    progress: 85,
+    specs: { trafo: "1 x 5.1 MVA", cable: "1x185/25 mm²", type: "3 inputs + 1 trafo" },
+    stages: { road: "Готов", pad: "Готова", foundation: "Бетониран (Акт 14 издаден)", grid: "Положен кабел", turbine: "Очаква се" },
+    timeline: [
+      { date: "05.09.2026", title: "Бетониране на фундамент", note: "Кубици бетон съгласно рецепта.", img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" }
+    ],
     video: null
   },
   {
@@ -176,11 +183,14 @@ const TURBINES_DATA = [
     name: "Ветрогенератор T16",
     branch: "Клон 4",
     coords: [43.542703, 28.156458],
-    overallStatus: "Завършен (Акт 14/15)",
-    progress: 95,
-    specs: { trafo: "1x 5.1 MVA", cable: "1x95/16 mm²", type: "1 input + 1 trafo" },
+    overallStatus: "Завършен / Акт 14/15",
+    progress: 90,
+    specs: { trafo: "1 x 5.1 MVA", cable: "1x95/16 mm²", type: "1 input + 1 trafo" },
     stages: { road: "Готов", pad: "Готова", foundation: "Бетониран, обратен насип", grid: "Кабелна линия готова", turbine: "Компоненти на площадка" },
-    timeline: [],
+    timeline: [
+      { date: "15.08.2026", title: "Изкоп фундамент T16", note: "Проверка на почвения пласт.", img: "https://images.unsplash.com/photo-1541888946425-d0fbb186f5f7?auto=format&fit=crop&w=800&q=80" },
+      { date: "28.08.2026", title: "Бетониране на T16", note: "Непрекъснат залив съгласно протокол.", img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" }
+    ],
     video: null
   },
   {
@@ -190,59 +200,61 @@ const TURBINES_DATA = [
     coords: [43.553383, 28.161289],
     overallStatus: "Планиран",
     progress: 0,
-    specs: { trafo: "1x 5.1 MVA", cable: "1x95/16 mm²", type: "1 input + 1 trafo" },
+    specs: { trafo: "1 x 5.1 MVA", cable: "1x95/16 mm²", type: "1 input + 1 trafo" },
     stages: { road: "Не е стартиран", pad: "Не е стартирана", foundation: "Не е стартиран", grid: "Не е стартиран", turbine: "Не е доставена" },
     timeline: [],
     video: null
   },
 
-  // --- КЛОН 5 & 4a (Branch 5 & 4a) ---
+  // --- КЛОН 4a / 5 (Branch 4a / 5) ---
   {
     id: "T18",
     name: "Ветрогенератор T18",
     branch: "Клон 5",
     coords: [43.557733, 28.167542],
-    overallStatus: "Изкопни работи",
-    progress: 40,
-    specs: { trafo: "1x 5.1 MVA", cable: "1x95/16 mm²", type: "2 inputs + 1 trafo" },
+    overallStatus: "Изкоп",
+    progress: 35,
+    specs: { trafo: "1 x 5.1 MVA", cable: "1x95/16 mm²", type: "2 inputs + 1 trafo" },
     stages: { road: "Готов", pad: "В процес", foundation: "Изкоп", grid: "Не е стартиран", turbine: "Не е доставена" },
     timeline: [],
     video: null
   },
   {
     id: "T17",
-    name: "Ветрогенератор T17",
+    name: "Ветрогенератор T17 (Бъдещо)",
     branch: "Клон 4a (Бъдещ)",
-    coords: [43.550000, 28.160000], // временно близо до Т19, ще се уточни
+    coords: [43.550000, 28.160000],
     overallStatus: "Бъдещо разширение",
     progress: 0,
-    specs: { trafo: "1x 5.1 MVA", cable: "1x95/16 mm²", type: "Бъдещо разширение" },
+    specs: { trafo: "1 x 5.1 MVA", cable: "1x95/16 mm²", type: "Бъдещо разширение" },
     stages: { road: "Проект", pad: "Проект", foundation: "Проект", grid: "Проект", turbine: "Проект" },
     timeline: [],
     video: null
   },
 
-  // --- ПОДСТАНЦИЯ И BESS ---
+  // --- ОБЩИ ОБЕКТИ ---
   {
     id: "SUBSTATION",
     name: "Подстанция 33/110 kV",
-    branch: "Централен възел",
+    branch: "Инфраструктура",
     coords: [43.572781, 28.158119],
     overallStatus: "Армировка / Бетон",
-    progress: 60,
-    specs: { trafo: "2x Тр-ри 110/33kV", cable: "Шини 33kV, КРУ Siemens NXPLUS C", type: "Подстанция" },
-    stages: { road: "Готов", pad: "Площадка готова", foundation: "Фундаменти готови", grid: "Свързаност 33kV в ход", turbine: "—" },
-    timeline: [],
+    progress: 50,
+    specs: { trafo: "2x Тр-ри 110/33kV", cable: "Шини 33kV, КРУ NXPLUS C", type: "Главна подстанция" },
+    stages: { road: "Готов", pad: "Сграден кофраж", foundation: "Излети основи", grid: "Трансформатори в доставка", turbine: "—" },
+    timeline: [
+      { date: "01.07.2026", title: "Изкоп за фундаменти на силови трансформатори", note: "Контрол на нивата.", img: "https://images.unsplash.com/photo-1541888946425-d0fbb186f5f7?auto=format&fit=crop&w=800&q=80" }
+    ],
     video: null
   },
   {
     id: "BESS",
     name: "Батерийно стопанство (BESS)",
-    branch: "Съхранение",
+    branch: "Инфраструктура",
     coords: [43.571000, 28.156000],
     overallStatus: "Планиран",
     progress: 10,
-    specs: { trafo: "Кабел 1x400/35 mm²", cable: "Към ПС 33/110kV", type: "BESS" },
+    specs: { trafo: "Кабелна линия 1x400/35", cable: "Връзка към ПС 33/110kV", type: "Съхранение на енергия" },
     stages: { road: "Трасиран", pad: "Планирана", foundation: "Проект", grid: "Проект", turbine: "—" },
     timeline: [],
     video: null
