@@ -150,7 +150,13 @@ const TURBINES_DATA = [
     progress: 0,
     specs: { trafo: "1 x 5.1 MVA", cable: "1x95/16 mm²", type: "1 input + 1 trafo" },
     stages: { road: "Готов", pad: "Готова", foundation: "Готов", grid: "Прави се", turbine: "Не е доставена" },
-    timeline: [],
+    timeline: [
+      { date: "17.06.2026", title: "Подготвяне на терена T16", note: "", img: "media/T13/20260617_103556.jpg" },
+      { date: "14.07.2026", title: "Анкерна клетка T16", note: "", img: "media/T13/20260714_153803.jpg" },
+      { date: "14.09.2026", title: "Метална конструкция T16", note: "", img: "media/T13/20260914_140650.jpg" },
+      { date: "17.09.2026", title: "Бетониране на T16", note: "", img: "media/T13/20260917_144813.jpg" },
+      { date: "09.10.2026", title: "Завиване на фундамент T16", note: "", img: "media/T13/20261009_110618.jpg" }
+    ],
     video: null
   },
 
