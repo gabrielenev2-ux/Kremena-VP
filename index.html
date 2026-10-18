@@ -310,15 +310,6 @@
       document.getElementById('m-percent').innerText = `${data.progress}%`;
       document.getElementById('m-progressbar').style.width = `${data.progress}%`;
 
-      // Google Drive бутон
-    const driveBox = document.getElementById('m-drive-box') || createDriveBox();
-    if (data.driveLink) {
-      document.getElementById('m-drive-link').href = data.driveLink;
-      driveBox.classList.remove('hidden');
-    } else {
-      driveBox.classList.add('hidden');
-    }
-
       
       // Етапи
       const stagesDiv = document.getElementById('m-stages');
