@@ -310,6 +310,21 @@
       document.getElementById('m-percent').innerText = `${data.progress}%`;
       document.getElementById('m-progressbar').style.width = `${data.progress}%`;
 
+      // Google Drive бутон
+    const driveBox = document.getElementById('m-drive-box') || createDriveBox();
+    if (data.driveLink) {
+      document.getElementById('m-drive-link').href = data.driveLink;
+      driveBox.classList.remove('hidden');
+    } else {
+      driveBox.classList.add('hidden');
+    }
+
+    document.getElementById('m-specs').innerHTML = `
+        <div><strong>Трафопост:</strong> ${data.specs.trafo}</div>
+        <div><strong>Кабел 33kV:</strong> ${data.specs.cable}</div>
+        <div><strong>Конфигурация:</strong> ${data.specs.type}</div>
+      `;
+      
       // Етапи
       const stagesDiv = document.getElementById('m-stages');
       stagesDiv.innerHTML = `
@@ -351,15 +366,6 @@
     function closeModal() {
       document.getElementById('detail-modal').classList.add('hidden');
       document.getElementById('m-video').pause();
-    }
-
-    // Google Drive бутон
-    const driveBox = document.getElementById('m-drive-box') || createDriveBox();
-    if (data.driveLink) {
-      document.getElementById('m-drive-link').href = data.driveLink;
-      driveBox.classList.remove('hidden');
-    } else {
-      driveBox.classList.add('hidden');
     }
 
     window.onload = checkAuth;
