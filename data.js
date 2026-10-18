@@ -100,7 +100,13 @@ const TURBINES_DATA = [
     progress: 15,
     specs: { trafo: "1 x 5.1 MVA", cable: "1x95/16 mm²", type: "2 inputs + 1 trafo" },
     stages: { road: "Готов", pad: "Готова", foundation: "Готов", grid: "Готово", turbine: "Не е доставена" },
-    timeline: [],
+   timeline: [
+      { date: "24.07.2026", title: "Подготвяне на терена T4", note: "", img: "media/T4/20260724_135733.jpg" },
+      { date: "25.08.2026", title: "Льосова покривка T4", note: "", img: "media/T4/20260825_121839.jpg" },
+      { date: "17.09.2026", title: "Изглажане на чакъл T4", note: "", img: "media/T4/20260917_144520.jpg" },
+      { date: "23.09.2026", title: "Анкерна клетка T4", note: "", img: "media/T4/20260923_155630.jpg" },
+      { date: "09.10.2026", title: "Метална конструкция T4", note: "", img: "media/T4/20261009_100741.jpg" }
+    ],
     video: null
   },
   {
@@ -151,11 +157,11 @@ const TURBINES_DATA = [
     specs: { trafo: "1 x 5.1 MVA", cable: "1x95/16 mm²", type: "1 input + 1 trafo" },
     stages: { road: "Готов", pad: "Готова", foundation: "Готов", grid: "Прави се", turbine: "Не е доставена" },
     timeline: [
-      { date: "17.06.2026", title: "Подготвяне на терена T16", note: "", img: "media/T13/20260617_103556.jpg" },
-      { date: "14.07.2026", title: "Анкерна клетка T16", note: "", img: "media/T13/20260714_153803.jpg" },
-      { date: "14.09.2026", title: "Метална конструкция T16", note: "", img: "media/T13/20260914_140650.jpg" },
-      { date: "17.09.2026", title: "Бетониране на T16", note: "", img: "media/T13/20260917_144813.jpg" },
-      { date: "09.10.2026", title: "Завиване на фундамент T16", note: "", img: "media/T13/20261009_110618.jpg" }
+      { date: "17.06.2026", title: "Подготвяне на терена T13", note: "", img: "media/T13/20260617_103556.jpg" },
+      { date: "14.07.2026", title: "Анкерна клетка T13", note: "", img: "media/T13/20260714_153803.jpg" },
+      { date: "14.09.2026", title: "Метална конструкция T13", note: "", img: "media/T13/20260914_140650.jpg" },
+      { date: "17.09.2026", title: "Бетониране на T13", note: "", img: "media/T13/20260917_144813.jpg" },
+      { date: "09.10.2026", title: "Завиване на фундамент T13", note: "", img: "media/T13/20261009_110618.jpg" }
     ],
     video: null
   },
