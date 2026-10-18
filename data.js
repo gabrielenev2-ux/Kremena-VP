@@ -33,7 +33,7 @@ const TURBINES_DATA = [
     timeline: [],
     
     // Линк към пълната папка в Google Drive за този генератор
-    driveLink: "https://drive.google.com/drive/folders/1OUVyWXGcUUCREg0uXvg4wxjKuzeLKclY",
+    driveLink: "https://drive.google.com/drive/folders/1OUVyWXGcUUCREg0uXvg4wxjKuzeLKclY?usp=drive_link",
     
     video: null
   },
