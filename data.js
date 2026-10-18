@@ -52,6 +52,9 @@ const TURBINES_DATA = [
       { date: "01.10.2026", title: "Завиване на фундамент T2", note: "", img: "media/T2/20261001_105125.jpg" },
       { date: "09.10.2026", title: "Затруване на фундамент T2", note: "", img: "media/T2/20261009_115423.jpg" }
     ],
+    // Линк към пълната папка в Google Drive за този генератор
+    driveLink: "https://drive.google.com/drive/folders/1GuIjD0KbvwATffDbcQ5NnxIJce_yKn9C?usp=drive_link",
+    
     video: null
   },
   {
@@ -64,6 +67,9 @@ const TURBINES_DATA = [
     specs: { trafo: "1 x 5.1 MVA", cable: "1x400/35 mm²", type: "2 inputs + 1 trafo" },
     stages: { road: "Готов", pad: "Готова", foundation: "Изкопни дейности", grid: "Не е стартиран", turbine: "Не е доставена" },
     timeline: [],
+    // Линк към пълната папка в Google Drive за този генератор
+    driveLink: "https://drive.google.com/drive/folders/1yrs0nThcBwCyzAfCexmfHB53BdXi2Hir?usp=drive_link",
+    
     video: null
   },
   {
@@ -76,6 +82,9 @@ const TURBINES_DATA = [
     specs: { trafo: "1 x 5.1 MVA", cable: "1x400/35 mm²", type: "2 inputs + 1 trafo" },
     stages: { road: "Готов", pad: "Готова", foundation: "Не е стартиран", grid: "Не е стартиран", turbine: "Не е доставена" },
     timeline: [],
+    // Линк към пълната папка в Google Drive за този генератор
+    driveLink: "https://drive.google.com/drive/folders/1Fjv1V4JgbqpyKWMl3uiv1sWbppMzDDdb?usp=drive_link",
+    
     video: null
   },
   {
@@ -88,6 +97,9 @@ const TURBINES_DATA = [
     specs: { trafo: "1 x 5.1 MVA", cable: "1x95/16 mm²", type: "1 input + 1 trafo" },
     stages: { road: "Готов", pad: "Прави се", foundation: "Не е стартиран", grid: "Не е стартиран", turbine: "Не е доставена" },
     timeline: [],
+    // Линк към пълната папка в Google Drive за този генератор
+    driveLink: "https://drive.google.com/drive/folders/1D_SjHlpgkszL37OSyYO1-R2CRwgmxRpk?usp=drive_link",
+    
     video: null
   },
 
@@ -109,6 +121,9 @@ const TURBINES_DATA = [
       { date: "09.10.2026", title: "Метална конструкция T4", note: "", img: "media/T4/20261009_100741.jpg" },
       { date: "10.10.2026", title: "Бетониране на T4", note: "", img: "media/T4/ea6c62f0-4145-45a0-9ace-17eab939f699.jpg" },
     ],
+    // Линк към пълната папка в Google Drive за този генератор
+    driveLink: "https://drive.google.com/drive/folders/1-qi7A7nM2anWIZBa9prCHQ-83hejJv56?usp=drive_link",
+    
     video: null
   },
   {
@@ -121,6 +136,9 @@ const TURBINES_DATA = [
     specs: { trafo: "1 x 5.1 MVA", cable: "1x185/25 mm²", type: "3 inputs + 1 trafo" },
     stages: { road: "Готов", pad: "Планирана", foundation: "Не е стартиран", grid: "Не е стартиран", turbine: "Не е доставена" },
     timeline: [],
+    // Линк към пълната папка в Google Drive за този генератор
+    driveLink: "https://drive.google.com/drive/folders/1Apsb9q2bJdh8kpANBL7gsJPNe1Ir-lHn?usp=drive_link",
+    
     video: null
   },
 
@@ -135,6 +153,9 @@ const TURBINES_DATA = [
     specs: { trafo: "1 x 5.1 MVA", cable: "1x400/35 mm²", type: "2 inputs + 1 trafo" },
     stages: { road: "Готов", pad: "Прави се", foundation: "Не е стартиран", grid: "Не е стартиран", turbine: "Не е доставена" },
     timeline: [],
+    // Линк към пълната папка в Google Drive за този генератор
+    driveLink: "https://drive.google.com/drive/folders/1hm5ztKJ4wyfiyduYnaMWrGAU3bTVDEcp?usp=drive_link",
+    
     video: null
   },
   {
@@ -147,6 +168,9 @@ const TURBINES_DATA = [
     specs: { trafo: "1 x 5.1 MVA", cable: "1x185/25 mm²", type: "2 inputs + 1 trafo" },
     stages: { road: "Готов", pad: "Не е стартирана", foundation: "Не е стартиран", grid: "Не е стартиран", turbine: "Не е доставена" },
     timeline: [],
+    // Линк към пълната папка в Google Drive за този генератор
+    driveLink: "https://drive.google.com/drive/folders/1SelUAWzvFzyuX0lxn4TcmxiT-3O-JcK6?usp=drive_link",
+    
     video: null
   },
   {
@@ -165,6 +189,9 @@ const TURBINES_DATA = [
       { date: "17.09.2026", title: "Бетониране на T13", note: "", img: "media/T13/20260917_144813.jpg" },
       { date: "09.10.2026", title: "Завиване на фундамент T13", note: "", img: "media/T13/20261009_110618.jpg" }
     ],
+    // Линк към пълната папка в Google Drive за този генератор
+    driveLink: "https://drive.google.com/drive/folders/1Xrmw2k-pWGLPHqMjzQjSpXHIEq6vtWGs?usp=drive_link",
+    
     video: null
   },
 
@@ -179,6 +206,9 @@ const TURBINES_DATA = [
     specs: { trafo: "1 x 5.1 MVA", cable: "1x400/35 mm²", type: "2 inputs + 1 trafo" },
     stages: { road: "Готов", pad: "Готова", foundation: "Анкерна клетка", grid: "Не е стартиран", turbine: "Не е доставена" },
     timeline: [],
+    // Линк към пълната папка в Google Drive за този генератор
+    driveLink: "https://drive.google.com/drive/folders/1gSi85L54CmDf9HFNkhhMbTH8qmzhyLKr?usp=drive_link",
+    
     video: null
   },
   {
@@ -193,6 +223,9 @@ const TURBINES_DATA = [
     timeline: [
       { date: "05.09.2026", title: "Бетониране на фундамент", note: "Кубици бетон съгласно рецепта.", img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" }
     ],
+    // Линк към пълната папка в Google Drive за този генератор
+    driveLink: "https://drive.google.com/drive/folders/16WLjJxVreqgdm8MVHVjrxsXIwaI4TQRU?usp=drive_link",
+    
     video: null
   },
   {
@@ -212,6 +245,9 @@ const TURBINES_DATA = [
       { date: "05.09.2026", title: "Бетониране на T16", note: "", img: "media/T16/20260905_182027.jpg" },
       { date: "06.09.2026", title: "Завиване на фундамент T16", note: "", img: "media/T16/IMG-7750f8a81ecd537eee12c9e7be0b58ea-V.jpg" }
     ],
+    // Линк към пълната папка в Google Drive за този генератор
+    driveLink: "https://drive.google.com/drive/folders/1H3iVcgBJOFL9XT1yINxP8PY6lJ5u0IVg?usp=drive_link",
+    
     video: null
   },
   {
@@ -224,6 +260,9 @@ const TURBINES_DATA = [
     specs: { trafo: "1 x 5.1 MVA", cable: "1x95/16 mm²", type: "1 input + 1 trafo" },
     stages: { road: "Готов", pad: "Прави се", foundation: "Не е стартиран", grid: "Не е стартиран", turbine: "Не е доставена" },
     timeline: [],
+    // Линк към пълната папка в Google Drive за този генератор
+    driveLink: "https://drive.google.com/drive/folders/1ySNh0RczG8moWgDRIJ-zWkHLnfdKw_wY?usp=drive_link",
+    
     video: null
   },
 
@@ -238,6 +277,9 @@ const TURBINES_DATA = [
     specs: { trafo: "1 x 5.1 MVA", cable: "1x95/16 mm²", type: "2 inputs + 1 trafo" },
     stages: { road: "Готов", pad: "В процес", foundation: "В процес", grid: "Не е стартиран", turbine: "Не е доставена" },
     timeline: [],
+    // Линк към пълната папка в Google Drive за този генератор
+    driveLink: "https://drive.google.com/drive/folders/1BOJYeBE5MbA21xgv2rU1t5vAKHgubE0F?usp=drive_link",
+    
     video: null
   },
   {
@@ -250,6 +292,9 @@ const TURBINES_DATA = [
     specs: { trafo: "1 x 5.1 MVA", cable: "1x95/16 mm²", type: "Бъдещо разширение" },
     stages: { road: "Проект", pad: "Проект", foundation: "Проект", grid: "Проект", turbine: "Проект" },
     timeline: [],
+    // Линк към пълната папка в Google Drive за този генератор
+    driveLink: "https://drive.google.com/drive/folders/1OUVyWXGcUUCREg0uXvg4wxjKuzeLKclY?usp=drive_link",
+    
     video: null
   },
 
