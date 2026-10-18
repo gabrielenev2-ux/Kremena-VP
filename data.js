@@ -30,12 +30,11 @@ const TURBINES_DATA = [
     progress: 5,
     specs: { trafo: "1 x 5.1 MVA", cable: "1x95/16 mm²", type: "1 input + 1 trafo" },
     stages: { road: "Готов", pad: "Готова", foundation: " Не е направена", grid: "Трасето е изкопано", turbine: "Не е доставена" },
-    timeline: [
-      { date: "10.08.2026", title: "Завършен изкоп", note: "Нивото на подложения бетон е одобрено.", img: "https://images.unsplash.com/photo-1541888946425-d0fbb186f5f7?auto=format&fit=crop&w=800&q=80" },
-      { date: "25.08.2026", title: "Армиране на фундамент", note: "Полагане на долна скара.", img: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80" }
-    ],
+    timeline: [],
+    
     // Линк към пълната папка в Google Drive за този генератор
     driveLink: "https://drive.google.com/drive/folders/1OUVyWXGcUUCREg0uXvg4wxjKuzeLKclY",
+    
     video: null
   },
   {
