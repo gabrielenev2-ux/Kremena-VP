@@ -3,23 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ВЕЦ Кремена - Тригорци | Мониторинг на строежа</title>
+  <title>ВЕЦ «Кремена - Тригорци» — Мониторинг на обекта</title>
   
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Leaflet CSS & JS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-  <!-- Google Fonts & FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     body { font-family: 'Inter', sans-serif; }
-    #map { height: calc(100vh - 65px); width: 100%; z-index: 10; }
+    #map { height: calc(100vh - 64px); width: 100%; z-index: 10; }
     .turbine-badge {
       background: rgba(15, 23, 42, 0.9);
       color: #fff;
@@ -27,105 +22,109 @@
       border-radius: 9999px;
       font-size: 11px;
       font-weight: 700;
-      border: 1.5px solid white;
+      border: 2px solid;
       white-space: nowrap;
-      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      cursor: pointer;
     }
   </style>
 </head>
 <body class="bg-slate-900 text-slate-100 antialiased overflow-hidden">
 
-  <!-- ==================== ЕКРАН ЗА ВХОД (ПИН КОД) ==================== -->
+  <!-- МОДАЛ ЗА ВХОД -->
   <div id="login-modal" class="fixed inset-0 bg-slate-950/95 backdrop-blur-md z-[100] flex items-center justify-center p-4">
     <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl max-w-sm w-full shadow-2xl text-center">
-      <div class="w-16 h-16 bg-emerald-500/10 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4 border border-emerald-500/20 text-2xl">
-        <i class="fa-solid fa-shield-halved"></i>
+      <div class="w-14 h-14 bg-emerald-500/10 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4 border border-emerald-500/20 text-2xl">
+        <i class="fa-solid fa-lock"></i>
       </div>
-      <h2 class="text-xl font-bold text-white mb-1">ВЕЦ Кремена - Тригорци</h2>
-      <p class="text-xs text-slate-400 mb-6">Въведете ПИН код за достъп до системата за строителен надзор</p>
+      <h2 class="text-xl font-bold text-white mb-1">ВЕЦ „Кремена - Тригорци“</h2>
+      <p class="text-xs text-slate-400 mb-6">Въведете парола за достъп</p>
       
       <form onsubmit="handleLogin(event)" class="space-y-4">
-        <input id="pin-input" type="password" placeholder="ПИН код..." 
-          class="w-full text-center tracking-widest text-lg py-3 px-4 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-emerald-500 transition">
-        <p id="login-error" class="text-rose-400 text-xs hidden">Грешен код! Моля, опитайте отново.</p>
-        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-medium py-3 rounded-xl transition shadow-lg shadow-emerald-600/30">
-          Вход в системата
+        <input id="pin-input" type="password" placeholder="Парола..." autofocus
+          class="w-full text-center tracking-widest text-lg py-2.5 px-4 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-emerald-500">
+        <p id="login-error" class="text-rose-400 text-xs hidden">Невалидна парола!</p>
+        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-medium py-2.5 rounded-xl transition">
+          Влез
         </button>
       </form>
     </div>
   </div>
 
-  <!-- ==================== ОСНОВЕН ПАНЕЛ ==================== -->
+  <!-- ОСНОВЕН ПАНЕЛ -->
   <div id="app" class="hidden h-screen flex flex-col">
     
-    <!-- Навигационна лента -->
+    <!-- HEADER -->
     <header class="h-16 bg-slate-950 border-b border-slate-800 px-4 md:px-6 flex items-center justify-between z-20">
       <div class="flex items-center gap-3">
         <i class="fa-solid fa-wind text-emerald-400 text-xl"></i>
         <div>
-          <h1 class="font-bold text-sm md:text-base text-white leading-tight">ВЕЦ „Кремена - Тригорци“</h1>
-          <span class="text-[11px] text-slate-400">70 MW • Мониторинг на СМР</span>
+          <h1 class="font-bold text-sm md:text-base text-white">ВЕЦ „Кремена - Тригорци“ (70 MW)</h1>
+          <span class="text-[11px] text-slate-400">Технически мониторинг на строителството</span>
         </div>
       </div>
 
-      <!-- Превключвател Изглед: Карта / Схема -->
+      <!-- Превключвател Схема / Карта -->
       <div class="flex items-center bg-slate-800 p-1 rounded-xl border border-slate-700 text-xs">
-        <button id="btn-view-map" onclick="switchView('map')" class="px-3 py-1.5 rounded-lg font-medium bg-emerald-600 text-white transition">
-          <i class="fa-solid fa-map mr-1"></i> Карта
-        </button>
-        <button id="btn-view-scheme" onclick="switchView('scheme')" class="px-3 py-1.5 rounded-lg font-medium text-slate-300 hover:text-white transition">
+        <button id="btn-view-scheme" onclick="switchView('scheme')" class="px-3 py-1.5 rounded-lg font-medium bg-emerald-600 text-white transition">
           <i class="fa-solid fa-diagram-project mr-1"></i> Схема 33kV
+        </button>
+        <button id="btn-view-map" onclick="switchView('map')" class="px-3 py-1.5 rounded-lg font-medium text-slate-300 hover:text-white transition">
+          <i class="fa-solid fa-map mr-1"></i> Сателитна Карта
         </button>
       </div>
 
-      <!-- Изход -->
-      <button onclick="logout()" class="text-slate-400 hover:text-rose-400 transition text-sm">
+      <!-- Бутон изход -->
+      <button onclick="logout()" title="Изход" class="text-slate-400 hover:text-rose-400 p-2">
         <i class="fa-solid fa-right-from-bracket"></i>
       </button>
     </header>
 
     <!-- СЪДЪРЖАНИЕ -->
-    <main class="flex-1 relative">
+    <main class="flex-1 relative overflow-hidden">
       
-      <!-- 1. Сателитна карта -->
-      <div id="map-view" class="w-full h-full">
-        <div id="map"></div>
-        <!-- Легенда за статуси -->
-        <div class="absolute bottom-6 left-6 z-[400] bg-slate-900/90 backdrop-blur border border-slate-700/60 p-3 rounded-xl shadow-xl text-xs space-y-1.5">
-          <div class="font-semibold text-slate-300 pb-1 border-b border-slate-700">Легенда на етапите</div>
-          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-slate-400"></span> Планиран</div>
-          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-amber-500"></span> Изкопни работи</div>
-          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-blue-500"></span> Армировка / Бетон</div>
-          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-purple-500"></span> Монтаж турбина</div>
-          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-emerald-500"></span> Завършен / Акт 14</div>
-        </div>
-      </div>
-
-      <!-- 2. Блок-схема 33kV -->
-      <div id="scheme-view" class="hidden w-full h-full overflow-y-auto p-4 md:p-8 bg-slate-900">
+      <!-- ИЗГЛЕД СХЕМА -->
+      <div id="scheme-view" class="w-full h-full overflow-y-auto p-4 md:p-8 bg-slate-900">
         <div class="max-w-6xl mx-auto space-y-6">
-          <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+          <div class="flex flex-wrap items-center justify-between gap-4 bg-slate-950 p-4 rounded-xl border border-slate-800">
             <div>
-              <h2 class="text-xl font-bold text-white">Блок-схема на кабелна мрежа 33kV</h2>
-              <p class="text-xs text-slate-400">Организирана по енергийни клонове към ПС 33/110 kV</p>
+              <span class="text-xs text-slate-400">Централен възел</span>
+              <h2 class="text-lg font-bold text-white">Подстанция (ПС) 33/110kV</h2>
             </div>
-            <button onclick="openModal('SUBSTATION')" class="px-3 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-xs font-semibold flex items-center gap-2">
-              <i class="fa-solid fa-bolt text-amber-400"></i> Детайли за Подстанция
-            </button>
+            <div class="flex gap-2">
+              <button onclick="openModal('SUBSTATION')" class="px-4 py-2 bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 rounded-lg text-xs font-semibold hover:bg-emerald-600/30">
+                Детайли за ПС
+              </button>
+              <button onclick="openModal('BESS')" class="px-4 py-2 bg-amber-500/20 text-amber-400 border border-amber-500/30 rounded-lg text-xs font-semibold hover:bg-amber-500/30">
+                Батерийно стопанство (BESS)
+              </button>
+            </div>
           </div>
 
           <div id="branches-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <!-- Клоновете се генерират динамично -->
+            <!-- Клоновете се зареждат от data.js -->
           </div>
+        </div>
+      </div>
+
+      <!-- ИЗГЛЕД КАРТА -->
+      <div id="map-view" class="hidden w-full h-full relative">
+        <div id="map"></div>
+        <div class="absolute bottom-6 left-6 z-[400] bg-slate-950/90 backdrop-blur border border-slate-700/60 p-3 rounded-xl shadow-xl text-xs space-y-1.5">
+          <div class="font-semibold text-slate-300 pb-1 border-b border-slate-700">Легенда на етапите</div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-[#94a3b8]"></span> Планиран</div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-[#f59e0b]"></span> Изкопни работи</div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-[#3b82f6]"></span> Армировка / Бетон</div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-[#8b5cf6]"></span> Монтаж на турбина</div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-[#10b981]"></span> Завършен (Акт 14/15)</div>
         </div>
       </div>
 
     </main>
 
-    <!-- ==================== МОДАЛЕН ПРОЗОРЕЦ ==================== -->
-    <div id="detail-modal" class="hidden fixed inset-0 z-[500] bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
-      <div class="bg-slate-900 border border-slate-700 w-full max-w-2xl max-h-[90vh] rounded-2xl flex flex-col overflow-hidden shadow-2xl">
-        <!-- Modal Header -->
+    <!-- МОДАЛ ДЕТАЙЛИ ЗА ОБЕКТ -->
+    <div id="detail-modal" class="hidden fixed inset-0 z-[500] bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+      <div class="bg-slate-900 border border-slate-700 w-full max-w-xl max-h-[90vh] rounded-2xl flex flex-col overflow-hidden shadow-2xl">
         <div class="p-4 border-b border-slate-800 flex items-center justify-between bg-slate-950">
           <div>
             <span id="m-branch" class="text-xs font-bold text-emerald-400 uppercase tracking-wider"></span>
@@ -136,42 +135,43 @@
           </button>
         </div>
 
-        <!-- Modal Body -->
-        <div class="p-6 overflow-y-auto space-y-6 flex-1 text-sm">
-          
-          <!-- Прогрес -->
+        <div class="p-6 overflow-y-auto space-y-5 text-sm">
           <div>
             <div class="flex justify-between items-center mb-1 text-xs font-semibold text-slate-400">
               <span>СТАТУС: <span id="m-status" class="text-white"></span></span>
               <span id="m-percent"></span>
             </div>
             <div class="w-full bg-slate-800 rounded-full h-2">
-              <div id="m-progressbar" class="bg-emerald-500 h-2 rounded-full" style="width: 0%"></div>
+              <div id="m-progressbar" class="bg-emerald-500 h-2 rounded-full transition-all duration-300"></div>
             </div>
           </div>
 
-          <!-- Етапи строителство -->
+          <!-- Бутон за Google Drive архив -->
+          <div id="m-drive-box" class="hidden">
+            <a id="m-drive-link" href="#" target="_blank" class="w-full bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 border border-blue-500/30 font-medium py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 transition text-xs">
+              <i class="fa-brands fa-google-drive text-base"></i> Пълен архив със снимки в Google Drive
+            </a>
+          </div>
+
           <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
-            <h4 class="font-semibold text-xs text-slate-400 uppercase tracking-wider mb-3">Статус по дейности</h4>
-            <div class="grid grid-cols-2 gap-3 text-xs" id="m-stages">
-              <!-- Инжектират се с JS -->
-            </div>
+            <h4 class="font-semibold text-xs text-slate-400 uppercase tracking-wider mb-2">Технически параметри</h4>
+            <div class="text-xs text-slate-300 space-y-1" id="m-specs"></div>
           </div>
 
-          <!-- Хронология / Снимки -->
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+            <h4 class="font-semibold text-xs text-slate-400 uppercase tracking-wider mb-3">Статус по дейности (СМР)</h4>
+            <div class="grid grid-cols-2 gap-3 text-xs" id="m-stages"></div>
+          </div>
+
           <div>
-            <h4 class="font-semibold text-xs text-slate-400 uppercase tracking-wider mb-3">Хронология на изпълнението</h4>
-            <div id="m-timeline" class="space-y-4">
-              <!-- Инжектират се с JS -->
-            </div>
+            <h4 class="font-semibold text-xs text-slate-400 uppercase tracking-wider mb-3">Фотохроника и актове</h4>
+            <div id="m-timeline" class="space-y-3"></div>
           </div>
 
-          <!-- Видео (ако има) -->
           <div id="m-video-box" class="hidden">
-            <h4 class="font-semibold text-xs text-slate-400 uppercase tracking-wider mb-2">Видео от обекта</h4>
+            <h4 class="font-semibold text-xs text-slate-400 uppercase tracking-wider mb-2">Видео</h4>
             <video id="m-video" controls class="w-full rounded-xl bg-black max-h-60"></video>
           </div>
-
         </div>
       </div>
     </div>
@@ -180,7 +180,6 @@
 
   <script src="data.js"></script>
   <script>
-    // --- Автентикация ---
     function checkAuth() {
       if (sessionStorage.getItem("kremena_auth") === "true") {
         document.getElementById("login-modal").classList.add("hidden");
@@ -188,6 +187,7 @@
         initApp();
       }
     }
+
     function handleLogin(e) {
       e.preventDefault();
       const pin = document.getElementById("pin-input").value;
@@ -200,34 +200,30 @@
         document.getElementById("login-error").classList.remove("hidden");
       }
     }
+
     function logout() {
       sessionStorage.removeItem("kremena_auth");
       location.reload();
     }
 
-    // --- Карта & Схема ---
     let map = null;
-    let markers = {};
 
     function initApp() {
-      if (!map) {
-        initMap();
-        renderScheme();
-      }
+      renderScheme();
+      initMap();
     }
 
     function initMap() {
+      if (map) return;
       map = L.map('map').setView(PROJECT_CONFIG.centerCoords, PROJECT_CONFIG.defaultZoom);
 
-      // Сателитна подложка Esri
       L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
         maxZoom: 18,
-        attribution: 'Tiles &copy; Esri'
+        attribution: 'Esri, Maxar'
       }).addTo(map);
 
-      // Добавяне на маркери за турбини и обекти
       TURBINES_DATA.forEach(item => {
-        const color = STATUS_COLORS[item.overallStatus] || '#ffffff';
+        const color = STATUS_COLORS[item.overallStatus] || '#94a3b8';
         const customIcon = L.divIcon({
           className: 'custom-icon',
           html: `<div class="turbine-badge" style="border-color:${color};">${item.id}</div>`,
@@ -237,7 +233,6 @@
 
         const marker = L.marker(item.coords, { icon: customIcon }).addTo(map);
         marker.on('click', () => openModal(item.id));
-        markers[item.id] = marker;
       });
     }
 
@@ -250,18 +245,14 @@
       if (view === 'map') {
         mapV.classList.remove('hidden');
         schemeV.classList.add('hidden');
-        btnMap.classList.add('bg-emerald-600', 'text-white');
-        btnMap.classList.remove('text-slate-300');
-        btnScheme.classList.remove('bg-emerald-600', 'text-white');
-        btnScheme.classList.add('text-slate-300');
-        setTimeout(() => map.invalidateSize(), 100);
+        btnMap.className = "px-3 py-1.5 rounded-lg font-medium bg-emerald-600 text-white transition";
+        btnScheme.className = "px-3 py-1.5 rounded-lg font-medium text-slate-300 hover:text-white transition";
+        setTimeout(() => map.invalidateSize(), 200);
       } else {
         mapV.classList.add('hidden');
         schemeV.classList.remove('hidden');
-        btnScheme.classList.add('bg-emerald-600', 'text-white');
-        btnScheme.classList.remove('text-slate-300');
-        btnMap.classList.remove('bg-emerald-600', 'text-white');
-        btnMap.classList.add('text-slate-300');
+        btnScheme.className = "px-3 py-1.5 rounded-lg font-medium bg-emerald-600 text-white transition";
+        btnMap.className = "px-3 py-1.5 rounded-lg font-medium text-slate-300 hover:text-white transition";
       }
     }
 
@@ -270,15 +261,20 @@
       container.innerHTML = '';
 
       const branches = {};
-      TURBINES_DATA.forEach(t => {
-        if (!branches[t.branch]) branches[t.branch] = [];
-        branches[t.branch].push(t);
+      TURBINES_DATA.filter(t => t.id.startsWith('T') || t.id === 'SUBSTATION' || t.id === 'BESS').forEach(t => {
+        const group = t.branch || 'Други';
+        if (!branches[group]) branches[group] = [];
+        branches[group].push(t);
       });
 
       for (let branch in branches) {
         const card = document.createElement('div');
         card.className = "bg-slate-950 p-4 rounded-xl border border-slate-800";
-        let html = `<h3 class="font-bold text-emerald-400 mb-3">${branch}</h3><div class="space-y-2">`;
+        let html = `<h3 class="font-bold text-emerald-400 mb-3 flex items-center justify-between">
+                      <span>${branch}</span>
+                      <span class="text-xs text-slate-500">${branches[branch].length} обекта</span>
+                    </h3>
+                    <div class="space-y-2">`;
         
         branches[branch].forEach(item => {
           const color = STATUS_COLORS[item.overallStatus] || '#94a3b8';
@@ -286,9 +282,9 @@
             <div onclick="openModal('${item.id}')" class="p-2.5 rounded-lg bg-slate-900 border border-slate-800 flex justify-between items-center cursor-pointer hover:border-slate-600 transition">
               <div>
                 <div class="font-semibold text-white text-xs">${item.name}</div>
-                <div class="text-[11px] text-slate-400">${item.specs.type} (${item.specs.cable})</div>
+                <div class="text-[11px] text-slate-400">${item.specs.type} • ${item.specs.cable || ''}</div>
               </div>
-              <span class="text-[10px] px-2 py-0.5 rounded font-bold" style="background-color: ${color}20; color: ${color}; border: 1px solid ${color}40">${item.overallStatus}</span>
+              <span class="text-[10px] px-2 py-0.5 rounded font-bold" style="background-color: ${color}20; color: ${color}; border: 1.5px solid ${color}">${item.overallStatus}</span>
             </div>
           `;
         });
@@ -299,7 +295,6 @@
       }
     }
 
-    // --- Модален диалог за детайли ---
     function openModal(id) {
       const data = TURBINES_DATA.find(t => t.id === id);
       if (!data) return;
@@ -310,32 +305,42 @@
       document.getElementById('m-percent').innerText = `${data.progress}%`;
       document.getElementById('m-progressbar').style.width = `${data.progress}%`;
 
-      
-      // Етапи
-      const stagesDiv = document.getElementById('m-stages');
-      stagesDiv.innerHTML = `
-        <div><span class="text-slate-500">Път:</span> <span class="text-slate-200 font-medium">${data.stages.road}</span></div>
-        <div><span class="text-slate-500">Кранова площадка:</span> <span class="text-slate-200 font-medium">${data.stages.pad}</span></div>
-        <div><span class="text-slate-500">Фундамент:</span> <span class="text-slate-200 font-medium">${data.stages.foundation}</span></div>
-        <div><span class="text-slate-500">Кабелно трасе 33kV:</span> <span class="text-slate-200 font-medium">${data.stages.grid}</span></div>
+      // Google Drive бутон
+      const driveBox = document.getElementById('m-drive-box');
+      if (data.driveLink) {
+        document.getElementById('m-drive-link').href = data.driveLink;
+        driveBox.classList.remove('hidden');
+      } else {
+        driveBox.classList.add('hidden');
+      }
+
+      document.getElementById('m-specs').innerHTML = `
+        <div><strong>Трафопост:</strong> ${data.specs.trafo}</div>
+        <div><strong>Кабел 33kV:</strong> ${data.specs.cable}</div>
+        <div><strong>Конфигурация:</strong> ${data.specs.type}</div>
       `;
 
-      // Хронология
+      document.getElementById('m-stages').innerHTML = `
+        <div><span class="text-slate-500">Път:</span> <br><span class="text-slate-200 font-medium">${data.stages.road}</span></div>
+        <div><span class="text-slate-500">Кранова площадка:</span> <br><span class="text-slate-200 font-medium">${data.stages.pad}</span></div>
+        <div><span class="text-slate-500">Фундамент:</span> <br><span class="text-slate-200 font-medium">${data.stages.foundation}</span></div>
+        <div><span class="text-slate-500">Кабелна линия:</span> <br><span class="text-slate-200 font-medium">${data.stages.grid}</span></div>
+      `;
+
       const timelineDiv = document.getElementById('m-timeline');
       if (data.timeline && data.timeline.length > 0) {
         timelineDiv.innerHTML = data.timeline.map(item => `
-          <div class="border-l-2 border-emerald-500 pl-3">
-            <div class="text-xs text-emerald-400 font-bold">${item.date}</div>
-            <div class="font-semibold text-white text-sm">${item.title}</div>
+          <div class="border-l-2 border-emerald-500 pl-3 py-1">
+            <div class="text-[11px] text-emerald-400 font-bold">${item.date}</div>
+            <div class="font-semibold text-white text-xs">${item.title}</div>
             <p class="text-xs text-slate-400 mt-0.5">${item.note}</p>
             ${item.img ? `<img src="${item.img}" class="mt-2 rounded-lg max-h-48 w-full object-cover">` : ''}
           </div>
         `).join('');
       } else {
-        timelineDiv.innerHTML = '<p class="text-xs text-slate-500 italic">Все още няма въведени записи или снимки в хронологията.</p>';
+        timelineDiv.innerHTML = '<p class="text-xs text-slate-500 italic">Все още няма въведени снимки за този етап.</p>';
       }
 
-      // Видео
       const videoBox = document.getElementById('m-video-box');
       const video = document.getElementById('m-video');
       if (data.video) {
