@@ -106,7 +106,7 @@ const TURBINES_DATA = [
       { date: "17.09.2026", title: "Изглажане на чакъл T4", note: "", img: "media/T4/20260917_144520.jpg" },
       { date: "23.09.2026", title: "Анкерна клетка T4", note: "", img: "media/T4/20260923_155630.jpg" },
       { date: "09.10.2026", title: "Метална конструкция T4", note: "", img: "media/T4/20261009_100741.jpg" },
-      { date: "11.10.2026", title: "Бетониране на T4", note: "", img: "media/T4/ea6c62f0-4145-45a0-9ace-17eab939f699.jpg" },
+      { date: "10.10.2026", title: "Бетониране на T4", note: "", img: "media/T4/ea6c62f0-4145-45a0-9ace-17eab939f699.jpg" },
     ],
     video: null
   },
