@@ -191,12 +191,12 @@ const TURBINES_DATA = [
     specs: { trafo: "1 x 5.1 MVA", cable: "1x95/16 mm²", type: "1 input + 1 trafo" },
     stages: { road: "Готов", pad: "Готова", foundation: "Бетониран, обратен насип", grid: "Кабелна линия готова", turbine: "Компоненти на площадка" },
     timeline: [
-      { date: "22.05.2026", title: "Подготвяне на терена T16", note: "", img: "20260522_113043.jpg" },
-      { date: "15.06.2026", title: "Изкоп фундамент T16", note: "", img: "20260615_164436.jpg" },
-      { date: "14.07.2026", title: "Анкерна клетка T16", note: "", img: "20260714_154629.jpg" },
-      { date: "31.08.2026", title: "Метална конструкция T16", note: "", img: "20260825_115817.jpg" },
-      { date: "05.09.2026", title: "Бетониране на T16", note: "", img: "20260905_182027.jpg" },
-      { date: "06.09.2026", title: "Завиване на фундамент T16", note: "", img: "IMG-7750f8a81ecd537eee12c9e7be0b58ea-V.jpg" }
+      { date: "22.05.2026", title: "Подготвяне на терена T16", note: "", img: "media/T16/20260522_113043.jpg" },
+      { date: "15.06.2026", title: "Изкоп фундамент T16", note: "", img: "media/T16/20260615_164436.jpg" },
+      { date: "14.07.2026", title: "Анкерна клетка T16", note: "", img: "media/T16/20260714_154629.jpg" },
+      { date: "31.08.2026", title: "Метална конструкция T16", note: "", img: "media/T16/20260825_115817.jpg" },
+      { date: "05.09.2026", title: "Бетониране на T16", note: "", img: "media/T16/20260905_182027.jpg" },
+      { date: "06.09.2026", title: "Завиване на фундамент T16", note: "", img: "media/T16/IMG-7750f8a81ecd537eee12c9e7be0b58ea-V.jpg" }
     ],
     video: null
   },
