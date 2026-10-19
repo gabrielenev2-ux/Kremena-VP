@@ -326,3 +326,12 @@ const TURBINES_DATA = [
     video: null
   }
 ];
+// ... [тук си стои целият ваш стар код с всички турбини T1, T2 ... T19, Подстанция и BESS] ...
+
+// ДОБАВЕТЕ ТОВА САМО НАКРАЯ на файла data-kremena.js:
+const KREMENA_DATA = {
+  name: "ВЕЦ «Кремена - Тригорци» (70 MW)",
+  centerCoords: [43.565, 28.145],
+  defaultZoom: 13,
+  items: TURBINES_DATA // Това автоматично взима всички ваши генератори от стария код
+};
