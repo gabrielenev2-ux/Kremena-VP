@@ -1,4 +1,4 @@
-// data-strazhitsa.js - Данни за проект ВяЕЦ "Стражица" (70 MW)[cite: 9]
+// data-strazhitsa.js - Данни за проект ВяЕЦ "Стражица" (70 MW)
 
 const STRAZHITSA_DATA = {
   name: "ВяЕЦ «Стражица» (70 MW)",
@@ -16,7 +16,7 @@ const STRAZHITSA_DATA = {
       specs: { trafo: "33/110 kV", cable: "OPGW / OPUG", type: "Основна подстанция" },
       stages: { road: "Готов", pad: "Изграждане на КРУ 33kV", foundation: "Изкоп и основи", grid: "Оптична свързаност ODF", turbine: "—" },
       timeline: [
-        { date: "06.10.2026", title: "Изграждане на КРУ 33kV", note: "Монтаж на съоръжения в имот 19[cite: 9].", img: "" }
+        { date: "06.10.2026", title: "Изграждане на КРУ 33kV", note: "Монтаж на съоръжения в имот 19.", img: "" }
       ],
       driveLink: ""
     },
@@ -29,7 +29,7 @@ const STRAZHITSA_DATA = {
       coords: [43.410, 27.490],
       overallStatus: "Планиран",
       progress: 10,
-      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 1[cite: 9]", type: "Етап 2 (4 генератора)[cite: 9]" },
+      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 1", type: "Етап 2 (4 генератора)" },
       stages: { road: "Проектиране", pad: "Проект", foundation: "Не е стартиран", grid: "В проект", turbine: "Не е доставена" },
       timeline: [],
       driveLink: ""
@@ -43,10 +43,10 @@ const STRAZHITSA_DATA = {
       coords: [43.395, 27.515],
       overallStatus: "Изкопни работи",
       progress: 35,
-      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 2 (2250m)[cite: 9]", type: "Етап 1 (3 генератора)[cite: 9]" },
+      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 2 (2250m)", type: "Етап 1 (3 генератора)" },
       stages: { road: "Готов", pad: "В процес", foundation: "Изкоп", grid: "Полагане на кабел", turbine: "Очаква се" },
       timeline: [
-        { date: "15.09.2026", title: "Старт на изкопи по Клон 2", note: "Трасиране на дължина 2250 м[cite: 9].", img: "" }
+        { date: "15.09.2026", title: "Старт на изкопи по Клон 2", note: "Трасиране на дължина 2250 м.", img: "" }
       ],
       driveLink: ""
     },
@@ -59,7 +59,7 @@ const STRAZHITSA_DATA = {
       coords: [43.385, 27.525],
       overallStatus: "Планиран",
       progress: 15,
-      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 3 (1523m)[cite: 9]", type: "Етап 1[cite: 9]" },
+      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 3 (1523m)", type: "Етап 1" },
       stages: { road: "Трасиран", pad: "Планирана", foundation: "Не е стартиран", grid: "Проект", turbine: "Не е доставена" },
       timeline: [],
       driveLink: ""
@@ -73,10 +73,10 @@ const STRAZHITSA_DATA = {
       coords: [43.415, 27.480],
       overallStatus: "Армировка / Бетон",
       progress: 60,
-      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 4[cite: 9]", type: "Етап 1 (2 генератора)[cite: 9]" },
+      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 4", type: "Етап 1 (2 генератора)" },
       stages: { road: "Готов", pad: "Готова", foundation: "Армиране и бетониране", grid: "Готово трасе", turbine: "Очаква се" },
       timeline: [
-        { date: "31.08.2026", title: "Фундамент T16", note: "Завършен етап по бетониране[cite: 9].", img: "" }
+        { date: "31.08.2026", title: "Фундамент T16", note: "Завършен етап по бетониране.", img: "" }
       ],
       driveLink: ""
     },
@@ -89,10 +89,10 @@ const STRAZHITSA_DATA = {
       coords: [43.425, 27.470],
       overallStatus: "Армировка / Бетон",
       progress: 55,
-      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 5 (1393m)[cite: 9]", type: "Етап 1 (2 генератора)[cite: 9]" },
+      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 5 (1393m)", type: "Етап 1 (2 генератора)" },
       stages: { road: "Готов", pad: "Готова", foundation: "Излят подложен бетон", grid: "Изкоп", turbine: "Не е доставена" },
       timeline: [
-        { date: "06.10.2026", title: "Инспекция на площадка T10", note: "Проверка на армировъчни изходи[cite: 9].", img: "" }
+        { date: "06.10.2026", title: "Инспекция на площадка T10", note: "Проверка на армировъчни изходи.", img: "" }
       ],
       driveLink: ""
     },
@@ -105,12 +105,21 @@ const STRAZHITSA_DATA = {
       coords: [43.375, 27.535],
       overallStatus: "Изкопни работи",
       progress: 25,
-      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 6 (1085m)[cite: 9]", type: "Етап 1[cite: 9]" },
+      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 6 (1085m)", type: "Етап 1" },
       stages: { road: "В процес", pad: "Насип", foundation: "Изкоп", grid: "Проект", turbine: "Не е доставена" },
       timeline: [
-        { date: "23.09.2026", title: "Начало на изкопи по Клон 6", note: "Дължина на трасето 1085 м[cite: 9].", img: "" }
+        { date: "23.09.2026", title: "Начало на изкопи по Клон 6", note: "Дължина на трасето 1085 м.", img: "" }
       ],
       driveLink: ""
     }
   ]
 };
+
+// Свързващи променливи (мостчета), за да може index.html да ги разчете без грешка:
+const STRAZHITSA_CONFIG = {
+  name: STRAZHITSA_DATA.name,
+  centerCoords: STRAZHITSA_DATA.centerCoords,
+  defaultZoom: STRAZHITSA_DATA.defaultZoom
+};
+
+const STRAZHITSA_TURBINES = STRAZHITSA_DATA.items;
