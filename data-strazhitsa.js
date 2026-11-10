@@ -100,7 +100,7 @@ const STRAZHITSA_DATA = {
       id: "ST-T14",
       name: "Ветрогенератор T14",
       branch: "Клон 4 (Branch 4)",
-      coords: [43.420, 27.475],
+      coords: [43.4550072388753, 28.122917355298593],
       overallStatus: "Армировка / Бетон",
       progress: 50,
       specs: { trafo: "5.1 MVA", cable: "OPUG Клон 4", type: "Етап 1" },
