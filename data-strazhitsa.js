@@ -32,7 +32,7 @@ const STRAZHITSA_DATA = {
       specs: { trafo: "5.1 MVA", cable: "OPUG Клон 4", type: "Етап 1" },
       stages: { road: "Проектиране", pad: "Проект", foundation: "Не е стартиран", grid: "В проект", turbine: "Не е доставена" },
       timeline: [],
-      driveLink: ""
+      driveLink: "https://drive.google.com/drive/folders/1HKPlug7RZ17pZHslXCokzm7HO5PsHqD2?usp=drive_link"
     },
     {
       id: "ST-T7",
@@ -44,7 +44,7 @@ const STRAZHITSA_DATA = {
       specs: { trafo: "5.1 MVA", cable: "OPUG Клон 2", type: "Етап 1" },
       stages: { road: "Готов", pad: "В процес", foundation: "Изкоп", grid: "Полагане на кабел", turbine: "Очаква се" },
       timeline: [],
-      driveLink: ""
+      driveLink: "https://drive.google.com/drive/folders/1YJTMOo2TrgTefLByjTcJxVNkcVmbStfh?usp=drive_link"
     },
     {
       id: "ST-T9",
@@ -56,7 +56,7 @@ const STRAZHITSA_DATA = {
       specs: { trafo: "5.1 MVA", cable: "OPUG Клон 2", type: "Етап 1" },
       stages: { road: "Трасиран", pad: "Планирана", foundation: "Не е стартиран", grid: "Проект", turbine: "Не е доставена" },
       timeline: [],
-      driveLink: ""
+      driveLink: "https://drive.google.com/drive/folders/1hngyIiLKsgHBerWhg8uz95jjdWN6qnEK?usp=drive_link"
     },
     {
       id: "ST-T10",
@@ -70,7 +70,7 @@ const STRAZHITSA_DATA = {
       timeline: [
         { date: "06.10.2026", title: "Инспекция на площадка T10", note: "Проверка на армировъчни изходи.", img: "" }
       ],
-      driveLink: ""
+      driveLink: "https://drive.google.com/drive/folders/14TvKsuEVre1HWhzaKKSQt9jJNMu3Josn?usp=drive_link"
     },
     {
       id: "ST-T12",
@@ -82,7 +82,7 @@ const STRAZHITSA_DATA = {
       specs: { trafo: "5.1 MVA", cable: "OPUG Клон 5", type: "Етап 1" },
       stages: { road: "Проект", pad: "Проект", foundation: "Проект", grid: "Проект", turbine: "—" },
       timeline: [],
-      driveLink: ""
+      driveLink: "https://drive.google.com/drive/folders/1TdpPIvTV7oj_FpIeYHAL3a1RC0B-XVKa?usp=drive_link"
     },
     {
       id: "ST-T13",
@@ -94,7 +94,7 @@ const STRAZHITSA_DATA = {
       specs: { trafo: "5.1 MVA", cable: "OPUG Клон 5", type: "Етап 1" },
       stages: { road: "Проект", pad: "Проект", foundation: "Проект", grid: "Проект", turbine: "—" },
       timeline: [],
-      driveLink: ""
+      driveLink: "https://drive.google.com/drive/folders/1R1b5E0z2-GsevQPnujvFIgfNawHHsc-X?usp=drive_link"
     },
     {
       id: "ST-T14",
@@ -106,7 +106,7 @@ const STRAZHITSA_DATA = {
       specs: { trafo: "5.1 MVA", cable: "OPUG Клон 4", type: "Етап 1" },
       stages: { road: "Готов", pad: "Готова", foundation: "Армиране", grid: "Готово трасе", turbine: "Очаква се" },
       timeline: [],
-      driveLink: ""
+      driveLink: "https://drive.google.com/drive/folders/1_KuO9kikh02t3SidO5KZdWCu8t2CxKId?usp=drive_link"
     },
     {
       id: "ST-T16",
@@ -120,7 +120,7 @@ const STRAZHITSA_DATA = {
       timeline: [
         { date: "31.08.2026", title: "Фундамент T16", note: "Завършен етап по бетониране.", img: "" }
       ],
-      driveLink: ""
+      driveLink: "https://drive.google.com/drive/folders/1UQWfcVvd63jVYzzohBueB9F_P41oIqrY?usp=drive_link"
     },
     {
       id: "ST-T17",
@@ -132,7 +132,7 @@ const STRAZHITSA_DATA = {
       specs: { trafo: "5.1 MVA", cable: "OPUG Клон 3", type: "Етап 1" },
       stages: { road: "Проект", pad: "Проект", foundation: "Проект", grid: "Проект", turbine: "—" },
       timeline: [],
-      driveLink: ""
+      driveLink: "https://drive.google.com/drive/folders/14QAmGnuULb-2r-OQGmgxUjoE19mAyn2u?usp=drive_link"
     },
     {
       id: "ST-T18",
@@ -146,7 +146,7 @@ const STRAZHITSA_DATA = {
       timeline: [
         { date: "23.09.2026", title: "Начало на изкопи по Клон 6", note: "Дължина на трасето 1085 м.", img: "" }
       ],
-      driveLink: ""
+      driveLink: "https://drive.google.com/drive/folders/1LWNCD7Sp3lEU05JSh3B1V-iqEOPrcVYe?usp=drive_link"
     },
     {
       id: "ST-T19",
@@ -158,7 +158,7 @@ const STRAZHITSA_DATA = {
       specs: { trafo: "5.1 MVA", cable: "OPUG Клон 6", type: "Етап 1" },
       stages: { road: "В процес", pad: "В процес", foundation: "Изкоп", grid: "Проект", turbine: "—" },
       timeline: [],
-      driveLink: ""
+      driveLink: "https://drive.google.com/drive/folders/129snKys5gvT2U_HbWanBrxHk0wW2X5Ih?usp=drive_link"
     }
   ]
 };
