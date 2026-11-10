@@ -21,101 +21,149 @@ const STRAZHITSA_DATA = {
       driveLink: ""
     },
 
-    // --- КЛОН 1 (Branch 1) ---
+    // --- ГЕНЕРАТОРИ ---
     {
-      id: "ST-T1",
-      name: "Ветрогенератор (Клон 1)",
-      branch: "Клон 1 (Branch 1)",
-      coords: [43.410, 27.490],
+      id: "ST-T4",
+      name: "Ветрогенератор T4",
+      branch: "Клон 4 (Branch 4)",
+      coords: [43.415, 27.480],
       overallStatus: "Планиран",
       progress: 10,
-      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 1", type: "Етап 2 (4 генератора)" },
+      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 4", type: "Етап 1" },
       stages: { road: "Проектиране", pad: "Проект", foundation: "Не е стартиран", grid: "В проект", turbine: "Не е доставена" },
       timeline: [],
       driveLink: ""
     },
-
-    // --- КЛОН 2 (Branch 2) ---
     {
-      id: "ST-T2",
-      name: "Ветрогенератор T2",
+      id: "ST-T7",
+      name: "Ветрогенератор T7",
       branch: "Клон 2 (Branch 2)",
       coords: [43.395, 27.515],
       overallStatus: "Изкопни работи",
       progress: 35,
-      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 2 (2250m)", type: "Етап 1 (3 генератора)" },
+      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 2", type: "Етап 1" },
       stages: { road: "Готов", pad: "В процес", foundation: "Изкоп", grid: "Полагане на кабел", turbine: "Очаква се" },
-      timeline: [
-        { date: "15.09.2026", title: "Старт на изкопи по Клон 2", note: "Трасиране на дължина 2250 м.", img: "" }
-      ],
+      timeline: [],
       driveLink: ""
     },
-
-    // --- КЛОН 3 (Branch 3) ---
     {
-      id: "ST-T3",
-      name: "Ветрогенератор T3",
-      branch: "Клон 3 (Branch 3)",
-      coords: [43.385, 27.525],
+      id: "ST-T9",
+      name: "Ветрогенератор T9",
+      branch: "Клон 2 (Branch 2)",
+      coords: [43.390, 27.520],
       overallStatus: "Планиран",
       progress: 15,
-      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 3 (1523m)", type: "Етап 1" },
+      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 2", type: "Етап 1" },
       stages: { road: "Трасиран", pad: "Планирана", foundation: "Не е стартиран", grid: "Проект", turbine: "Не е доставена" },
       timeline: [],
       driveLink: ""
     },
-
-    // --- КЛОН 4 (Branch 4) ---
-    {
-      id: "ST-T4",
-      name: "Ветрогенератор T4 / T14 / T16",
-      branch: "Клон 4 (Branch 4)",
-      coords: [43.415, 27.480],
-      overallStatus: "Армировка / Бетон",
-      progress: 60,
-      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 4", type: "Етап 1 (2 генератора)" },
-      stages: { road: "Готов", pad: "Готова", foundation: "Армиране и бетониране", grid: "Готово трасе", turbine: "Очаква се" },
-      timeline: [
-        { date: "31.08.2026", title: "Фундамент T16", note: "Завършен етап по бетониране.", img: "" }
-      ],
-      driveLink: ""
-    },
-
-    // --- КЛОН 5 (Branch 5) ---
     {
       id: "ST-T10",
-      name: "Ветрогенератор T10 / T6",
+      name: "Ветрогенератор T10",
       branch: "Клон 5 (Branch 5)",
       coords: [43.425, 27.470],
       overallStatus: "Армировка / Бетон",
       progress: 55,
-      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 5 (1393m)", type: "Етап 1 (2 генератора)" },
+      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 5", type: "Етап 1" },
       stages: { road: "Готов", pad: "Готова", foundation: "Излят подложен бетон", grid: "Изкоп", turbine: "Не е доставена" },
       timeline: [
         { date: "06.10.2026", title: "Инспекция на площадка T10", note: "Проверка на армировъчни изходи.", img: "" }
       ],
       driveLink: ""
     },
-
-    // --- КЛОН 6 (Branch 6) ---
+    {
+      id: "ST-T12",
+      name: "Ветрогенератор T12",
+      branch: "Клон 5 (Branch 5)",
+      coords: [43.430, 27.465],
+      overallStatus: "Планиран",
+      progress: 10,
+      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 5", type: "Етап 1" },
+      stages: { road: "Проект", pad: "Проект", foundation: "Проект", grid: "Проект", turbine: "—" },
+      timeline: [],
+      driveLink: ""
+    },
+    {
+      id: "ST-T13",
+      name: "Ветрогенератор T13",
+      branch: "Клон 5 (Branch 5)",
+      coords: [43.435, 27.460],
+      overallStatus: "Планиран",
+      progress: 10,
+      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 5", type: "Етап 1" },
+      stages: { road: "Проект", pad: "Проект", foundation: "Проект", grid: "Проект", turbine: "—" },
+      timeline: [],
+      driveLink: ""
+    },
+    {
+      id: "ST-T14",
+      name: "Ветрогенератор T14",
+      branch: "Клон 4 (Branch 4)",
+      coords: [43.420, 27.475],
+      overallStatus: "Армировка / Бетон",
+      progress: 50,
+      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 4", type: "Етап 1" },
+      stages: { road: "Готов", pad: "Готова", foundation: "Армиране", grid: "Готово трасе", turbine: "Очаква се" },
+      timeline: [],
+      driveLink: ""
+    },
+    {
+      id: "ST-T16",
+      name: "Ветрогенератор T16",
+      branch: "Клон 3 (Branch 3)",
+      coords: [43.385, 27.525],
+      overallStatus: "Армировка / Бетон",
+      progress: 60,
+      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 3", type: "Етап 1" },
+      stages: { road: "Готов", pad: "Готова", foundation: "Бетониран фундамент", grid: "Кабелна линия готова", turbine: "—" },
+      timeline: [
+        { date: "31.08.2026", title: "Фундамент T16", note: "Завършен етап по бетониране.", img: "" }
+      ],
+      driveLink: ""
+    },
+    {
+      id: "ST-T17",
+      name: "Ветрогенератор T17",
+      branch: "Клон 3 (Branch 3)",
+      coords: [43.380, 27.530],
+      overallStatus: "Планиран",
+      progress: 10,
+      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 3", type: "Етап 1" },
+      stages: { road: "Проект", pad: "Проект", foundation: "Проект", grid: "Проект", turbine: "—" },
+      timeline: [],
+      driveLink: ""
+    },
     {
       id: "ST-T18",
-      name: "Ветрогенератор T18 / T19",
+      name: "Ветрогенератор T18",
       branch: "Клон 6 (Branch 6)",
       coords: [43.375, 27.535],
       overallStatus: "Изкопни работи",
       progress: 25,
-      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 6 (1085m)", type: "Етап 1" },
+      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 6", type: "Етап 1" },
       stages: { road: "В процес", pad: "Насип", foundation: "Изкоп", grid: "Проект", turbine: "Не е доставена" },
       timeline: [
         { date: "23.09.2026", title: "Начало на изкопи по Клон 6", note: "Дължина на трасето 1085 м.", img: "" }
       ],
       driveLink: ""
+    },
+    {
+      id: "ST-T19",
+      name: "Ветрогенератор T19",
+      branch: "Клон 6 (Branch 6)",
+      coords: [43.370, 27.540],
+      overallStatus: "Изкопни работи",
+      progress: 20,
+      specs: { trafo: "5.1 MVA", cable: "OPUG Клон 6", type: "Етап 1" },
+      stages: { road: "В процес", pad: "В процес", foundation: "Изкоп", grid: "Проект", turbine: "—" },
+      timeline: [],
+      driveLink: ""
     }
   ]
 };
 
-// Свързващи променливи (мостчета), за да може index.html да ги разчете без грешка:
+// Свързващи променливи (мостчета) за index.html:
 const STRAZHITSA_CONFIG = {
   name: STRAZHITSA_DATA.name,
   centerCoords: STRAZHITSA_DATA.centerCoords,
