@@ -84,9 +84,13 @@ const STRAZHITSA_DATA = {
       progress: 40,
       specs: { trafo: "5.1 MVA", cable: "OPUG Клон 5", type: "Етап 1" },
       stages: { road: "Готов", pad: "Готова", foundation: "Излят подложен бетон", grid: "Изкоп", turbine: "Не е доставена" },
-      timeline: [
-        { date: "06.10.2026", title: "Инспекция на площадка T10", note: "Проверка на армировъчни изходи.", img: "" }
-      ],
+      timeline: [{ date: "24.07.2026", title: "Изкоп", note: "", img: "" },
+      { date: "25.08.2026", title: "Пилоти", note: "", img: "" },
+      { date: "10.09.2026", title: "Пилоти завършени", note: "", img: "" },
+      { date: "01.10.2026", title: "Метална конструкция", note: "", img: "" },
+      { date: "06.10.2026", title: "Бетониране", note: "", img: "" },
+      { date: "06.11.2026", title: "Хидроизолация", note: "", img: "" }
+    ],
       driveLink: "https://drive.google.com/drive/folders/14TvKsuEVre1HWhzaKKSQt9jJNMu3Josn?usp=drive_link"
     },
     {
@@ -98,7 +102,14 @@ const STRAZHITSA_DATA = {
       progress: 40,
       specs: { trafo: "5.1 MVA", cable: "OPUG Клон 5", type: "Етап 1" },
       stages: { road: "Проект", pad: "Проект", foundation: "Проект", grid: "Проект", turbine: "—" },
-      timeline: [],
+      timeline: [{ date: "25.08.2026", title: "Положен чакъл на долно ниво", note: "", img: "" },
+      { date: "10.09.2026", title: "Пилоти", note: "", img: "" },
+      { date: "25.09.2026", title: "Подложен бетон", note: "", img: "" },
+      { date: "01.10.2026", title: "Анкерна клетка", note: "", img: "" },
+      { date: "13.10.2026", title: "Метална конструкция", note: "", img: "" },
+      { date: "15.10.2026", title: "Бетониране", note: "", img: "" }
+      { date: "23.10.2026", title: "Хидроизолация", note: "", img: "" }
+    ],
       driveLink: "https://drive.google.com/drive/folders/1TdpPIvTV7oj_FpIeYHAL3a1RC0B-XVKa?usp=drive_link"
     },
     {
@@ -110,7 +121,14 @@ const STRAZHITSA_DATA = {
       progress: 40,
       specs: { trafo: "5.1 MVA", cable: "OPUG Клон 5", type: "Етап 1" },
       stages: { road: "Проект", pad: "Проект", foundation: "Проект", grid: "Проект", turbine: "—" },
-      timeline: [],
+      timeline: [{ date: "25.08.2026", title: "Изкоп", note: "", img: "" },
+      { date: "10.09.2026", title: "Чакълирано долно ниво", note: "", img: "" },
+      { date: "09.10.2026", title: "Завършени пилоти", note: "", img: "" },
+      { date: "13.10.2026", title: "Подложен бетон", note: "", img: "" },
+      { date: "20.10.2026", title: "Анкерна клетка", note: "", img: "" },
+      { date: "23.10.2026", title: "Долна скара", note: "", img: "" }
+      { date: "09.11.2026", title: "Бетониране", note: "", img: "" }
+    ],
       driveLink: "https://drive.google.com/drive/folders/1R1b5E0z2-GsevQPnujvFIgfNawHHsc-X?usp=drive_link"
     },
     {
@@ -122,7 +140,11 @@ const STRAZHITSA_DATA = {
       progress: 40,
       specs: { trafo: "5.1 MVA", cable: "OPUG Клон 4", type: "Етап 1" },
       stages: { road: "Готов", pad: "Готова", foundation: "Армиране", grid: "Готово трасе", turbine: "Очаква се" },
-      timeline: [],
+      timeline: [{ date: "24.07.2026", title: "Пилоти", note: "", img: "" },
+      { date: "14.09.2026", title: "Метална кострукция", note: "", img: "" },
+      { date: "15.09.2026", title: "Бетониране", note: "", img: "" },
+      { date: "09.10.2026", title: "Заровен и чакълиран", note: "", img: "" }
+    ],
       driveLink: "https://drive.google.com/drive/folders/1_KuO9kikh02t3SidO5KZdWCu8t2CxKId?usp=drive_link"
     },
     {
@@ -134,9 +156,12 @@ const STRAZHITSA_DATA = {
       progress: 40,
       specs: { trafo: "5.1 MVA", cable: "OPUG Клон 3", type: "Етап 1" },
       stages: { road: "Готов", pad: "Готова", foundation: "Бетониран фундамент", grid: "Кабелна линия готова", turbine: "—" },
-      timeline: [
-        { date: "31.08.2026", title: "Фундамент T16", note: "Завършен етап по бетониране.", img: "" }
-      ],
+      timeline: [{ date: "13.08.2026", title: "Подложен бетон и начална клетка", note: "", img: "" },
+      { date: "25.08.2026", title: "Метална конструкция", note: "", img: "" },
+      { date: "31.08.2026", title: "Бетониране", note: "", img: "" },
+      { date: "18.09.2026", title: "Хидроизолация", note: "", img: "" },
+      { date: "09.10.2026", title: "Заровен", note: "", img: "" }
+    ],
       driveLink: "https://drive.google.com/drive/folders/1UQWfcVvd63jVYzzohBueB9F_P41oIqrY?usp=drive_link"
     },
     {
@@ -148,7 +173,14 @@ const STRAZHITSA_DATA = {
       progress: 40,
       specs: { trafo: "5.1 MVA", cable: "OPUG Клон 3", type: "Етап 1" },
       stages: { road: "Проект", pad: "Проект", foundation: "Проект", grid: "Проект", turbine: "—" },
-      timeline: [],
+      timeline: [{ date: "15.06.2026", title: "Изкоп", note: "", img: "" },
+      { date: "18.06.2026", title: "Пилоти", note: "", img: "" },
+      { date: "13.08.2026", title: "Завършени пилоти", note: "", img: "" },
+      { date: "25.08.2026", title: "Подложен бетон и анкерна клетка", note: "", img: "" },
+      { date: "07.09.2026", title: "Бетониране", note: "", img: "" },
+      { date: "18.09.2026", title: "Хидроизолация", note: "", img: "" }
+      { date: "09.11.2026", title: "Заровен", note: "", img: "" }
+    ],
       driveLink: "https://drive.google.com/drive/folders/14QAmGnuULb-2r-OQGmgxUjoE19mAyn2u?usp=drive_link"
     },
     {
@@ -160,9 +192,14 @@ const STRAZHITSA_DATA = {
       progress: 40,
       specs: { trafo: "5.1 MVA", cable: "OPUG Клон 6", type: "Етап 1" },
       stages: { road: "В процес", pad: "Насип", foundation: "Изкоп", grid: "Проект", turbine: "Не е доставена" },
-      timeline: [
-        { date: "23.09.2026", title: "Начало на изкопи по Клон 6", note: "Дължина на трасето 1085 м.", img: "" }
-      ],
+      timeline: [{ date: "24.07.2026", title: "Изкоп", note: "", img: "" },
+      { date: "10.09.2026", title: "Пилоти", note: "", img: "" },
+      { date: "09.10.2026", title: "Подложен бетон и анкерна клетка", note: "", img: "" },
+      { date: "20.10.2026", title: "Долна скара", note: "", img: "" },
+      { date: "29.10.2026", title: "Метална конструкция", note: "", img: "" },
+      { date: "30.10.2026", title: "Бетониране", note: "", img: "" }
+      { date: "09.11.2026", title: "Хидроизолация", note: "", img: "" }
+    ],
       driveLink: "https://drive.google.com/drive/folders/1LWNCD7Sp3lEU05JSh3B1V-iqEOPrcVYe?usp=drive_link"
     },
     {
@@ -174,7 +211,12 @@ const STRAZHITSA_DATA = {
       progress: 40,
       specs: { trafo: "5.1 MVA", cable: "OPUG Клон 6", type: "Етап 1" },
       stages: { road: "В процес", pad: "В процес", foundation: "Изкоп", grid: "Проект", turbine: "—" },
-      timeline: [],
+      timeline: [
+      { date: "24.07.2026", title: "Пилоти", note: "", img: "" },
+      { date: "23.10.2026", title: "Подложен бетон", note: "", img: "" },
+      { date: "06.11.2026", title: "Метална конструкция", note: "", img: "" },
+      { date: "13.11.2026", title: "Бетониране", note: "", img: "" }
+    ],
       driveLink: "https://drive.google.com/drive/folders/129snKys5gvT2U_HbWanBrxHk0wW2X5Ih?usp=drive_link"
     }
   ]
