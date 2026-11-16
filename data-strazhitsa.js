@@ -107,7 +107,7 @@ const STRAZHITSA_DATA = {
       { date: "25.09.2026", title: "Подложен бетон", note: "", img: "" },
       { date: "01.10.2026", title: "Анкерна клетка", note: "", img: "" },
       { date: "13.10.2026", title: "Метална конструкция", note: "", img: "" },
-      { date: "15.10.2026", title: "Бетониране", note: "", img: "" }
+      { date: "15.10.2026", title: "Бетониране", note: "", img: "" },
       { date: "23.10.2026", title: "Хидроизолация", note: "", img: "" }
     ],
       driveLink: "https://drive.google.com/drive/folders/1TdpPIvTV7oj_FpIeYHAL3a1RC0B-XVKa?usp=drive_link"
@@ -126,7 +126,7 @@ const STRAZHITSA_DATA = {
       { date: "09.10.2026", title: "Завършени пилоти", note: "", img: "" },
       { date: "13.10.2026", title: "Подложен бетон", note: "", img: "" },
       { date: "20.10.2026", title: "Анкерна клетка", note: "", img: "" },
-      { date: "23.10.2026", title: "Долна скара", note: "", img: "" }
+      { date: "23.10.2026", title: "Долна скара", note: "", img: "" },
       { date: "09.11.2026", title: "Бетониране", note: "", img: "" }
     ],
       driveLink: "https://drive.google.com/drive/folders/1R1b5E0z2-GsevQPnujvFIgfNawHHsc-X?usp=drive_link"
@@ -178,7 +178,7 @@ const STRAZHITSA_DATA = {
       { date: "13.08.2026", title: "Завършени пилоти", note: "", img: "" },
       { date: "25.08.2026", title: "Подложен бетон и анкерна клетка", note: "", img: "" },
       { date: "07.09.2026", title: "Бетониране", note: "", img: "" },
-      { date: "18.09.2026", title: "Хидроизолация", note: "", img: "" }
+      { date: "18.09.2026", title: "Хидроизолация", note: "", img: "" },
       { date: "09.11.2026", title: "Заровен", note: "", img: "" }
     ],
       driveLink: "https://drive.google.com/drive/folders/14QAmGnuULb-2r-OQGmgxUjoE19mAyn2u?usp=drive_link"
@@ -197,7 +197,7 @@ const STRAZHITSA_DATA = {
       { date: "09.10.2026", title: "Подложен бетон и анкерна клетка", note: "", img: "" },
       { date: "20.10.2026", title: "Долна скара", note: "", img: "" },
       { date: "29.10.2026", title: "Метална конструкция", note: "", img: "" },
-      { date: "30.10.2026", title: "Бетониране", note: "", img: "" }
+      { date: "30.10.2026", title: "Бетониране", note: "", img: "" },
       { date: "09.11.2026", title: "Хидроизолация", note: "", img: "" }
     ],
       driveLink: "https://drive.google.com/drive/folders/1LWNCD7Sp3lEU05JSh3B1V-iqEOPrcVYe?usp=drive_link"
