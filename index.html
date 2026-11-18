@@ -229,6 +229,34 @@
 
   </div>
 
+  <!-- ФОРМА ЗА ДОБАВЯНЕ НА НОВ ЗАПИС В ХРОНОЛОГИЯТА -->
+<div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-3 mt-4">
+  <h4 class="font-semibold text-xs text-emerald-400 uppercase tracking-wider"><i class="fa-solid fa-camera mr-1"></i> Добави нов доклад / снимка</h4>
+  
+  <div class="space-y-2 text-xs">
+    <input id="new-title" type="text" placeholder="Заглавие (напр. Инспекция на армировка)" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white focus:outline-none focus:border-emerald-500">
+    <textarea id="new-note" placeholder="Описание / бележка от надзора..." rows="2" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-white focus:outline-none focus:border-emerald-500"></textarea>
+    
+    <div class="flex items-center gap-2">
+      <label class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 rounded-lg p-2 cursor-pointer text-center transition">
+        <i class="fa-solid fa-upload mr-1"></i> Избери снимка
+        <input id="new-img-file" type="file" accept="image/*" class="hidden" onchange="previewImageName(this)">
+      </label>
+      <span id="file-chosen" class="text-[11px] text-slate-400 truncate max-w-[150px]">Няма избрана</span>
+    </div>
+
+    <button onclick="generateTimelineCode()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-medium py-2 rounded-lg transition shadow-md">
+      Генерирай код за запис
+    </button>
+  </div>
+
+  <!-- Резултат, който само копираш -->
+  <div id="output-box" class="hidden space-y-1 pt-2 border-t border-slate-800">
+    <span class="text-[10px] text-amber-400 font-semibold">Копирай този код и го добави в масива timeline на обекта:</span>
+    <textarea id="generated-code" readonly class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-[10px] text-emerald-300 font-mono h-20 select-all"></textarea>
+  </div>
+</div>
+  
   <!-- Зареждане на файловете с данни -->
   <script src="data.js"></script>
   <script src="data-strazhitsa.js"></script>
